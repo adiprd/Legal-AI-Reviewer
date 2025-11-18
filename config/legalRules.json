@@ -1,0 +1,105 @@
+{
+  "clause_patterns": {
+    "confidentiality": {
+      "keywords": [
+        "rahasia",
+        "kerahasiaan",
+        "confidential",
+        "non-disclosure",
+        "nda"
+      ],
+      "risk_level": "medium",
+      "description": "Klausul Kerahasiaan"
+    },
+    "liability": {
+      "keywords": [
+        "tanggung jawab",
+        "liability",
+        "ganti rugi",
+        "indemnification",
+        "jaminan"
+      ],
+      "risk_level": "high",
+      "description": "Klausul Tanggung Jawab"
+    },
+    "termination": {
+      "keywords": [
+        "pengakhiran",
+        "termination",
+        "berakhir",
+        "putus",
+        "cancel"
+      ],
+      "risk_level": "medium",
+      "description": "Klausul Pengakhiran"
+    },
+    "payment": {
+      "keywords": [
+        "pembayaran",
+        "payment",
+        "biaya",
+        "fee",
+        "harga",
+        "price"
+      ],
+      "risk_level": "low",
+      "description": "Klausul Pembayaran"
+    },
+    "intellectual_property": {
+      "keywords": [
+        "kekayaan intelektual",
+        "intellectual property",
+        "hak cipta",
+        "copyright",
+        "paten"
+      ],
+      "risk_level": "high",
+      "description": "Klausul Kekayaan Intelektual"
+    },
+    "governing_law": {
+      "keywords": [
+        "hukum yang berlaku",
+        "governing law",
+        "yurisdiksi",
+        "jurisdiction"
+      ],
+      "risk_level": "medium",
+      "description": "Klausul Hukum yang Berlaku"
+    }
+  },
+  "risk_indicators": {
+    "high_risk_terms": [
+      "tanpa batas",
+      "unlimited",
+      "sepenuhnya",
+      "selamanya",
+      "mutlak",
+      "tidak dapat dibatalkan",
+      "irrevocable",
+      "final",
+      "mengikat"
+    ],
+    "medium_risk_terms": [
+      "dapat diperpanjang",
+      "renewable",
+      "opsional",
+      "optional",
+      "dengan pemberitahuan",
+      "with notice"
+    ],
+    "warning_signs": [
+      "sepihak",
+      "unilateral",
+      "denda",
+      "penalty",
+      "sanksi",
+      "force majeure",
+      "keadaan memaksa"
+    ]
+  },
+  "analysis_rules": {
+    "min_contract_length": 100,
+    "max_risk_score": 100,
+    "auto_flag_threshold": 70
+  }
+}

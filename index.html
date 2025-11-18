@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Legal Document Reviewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-balance-scale"></i> Legal AI Reviewer</h1>
+            <p>Analisis dokumen hukum secara otomatis</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx" hidden>
+                <div class="upload-content">
+                    <span class="upload-icon"><i class="fas fa-file-upload"></i></span>
+                    <p>Drop file atau <span class="browse-link">browse</span></p>
+                    <small>Format: .txt, .pdf, .doc, .docx</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-controls" id="analysisControls" style="display: none;">
+            <button id="analyzeBtn" class="analyze-btn">
+                <i class="fas fa-robot"></i> Analisis Dokumen
+            </button>
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Memproses dokumen...</p>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2><i class="fas fa-chart-bar"></i> Hasil Analisis</h2>
+                <div class="risk-badge" id="riskBadge"></div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-file-contract"></i></div>
+                    <div class="stat-value" id="statClauses">0</div>
+                    <div class="stat-label">Klausul</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <div class="stat-value" id="statIssues">0</div>
+                    <div class="stat-label">Masalah</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="stat-value" id="statScore">0</div>
+                    <div class="stat-label">Skor Risiko</div>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3><i class="fas fa-search"></i> Klausul Terdeteksi</h3>
+                    <div class="card-content" id="clausesFound"></div>
+                </div>
+                
+                <div class="result-card">
+                    <h3><i class="fas fa-times-circle"></i> Potensi Masalah</h3>
+                    <div class="card-content" id="issuesFound"></div>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="exportBtn" class="export-btn">
+                    <i class="fas fa-download"></i> Export Laporan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/documentProcessor.js"></script>
+    <script src="js/ruleEngine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
